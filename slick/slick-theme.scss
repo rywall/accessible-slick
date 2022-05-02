@@ -18,6 +18,7 @@ $slick-dot-color-active: $slick-dot-color !default;
 $slick-prev-character: "\2190" !default;
 $slick-next-character: "\2192" !default;
 $slick-dot-character: "\2022" !default;
+$slick-active-dot-character: "\2022" !default;
 $slick-pause-character: "\23f8" !default;
 $slick-play-character: "\25b6" !default;
 $slick-dot-size: 6px !default;
@@ -209,6 +210,9 @@ $slick-opacity-not-active: 0.25 !default;
         &.slick-active button .slick-dot-icon {
             color: $slick-dot-color-active;
             opacity: $slick-opacity-default;
+	    &:before {
+                content: $slick-active-dot-character;
+            }
         }
     }
 }
